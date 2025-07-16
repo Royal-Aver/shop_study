@@ -5,14 +5,14 @@
     <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
 {% endblock  %}
 
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock  %}
+
 {% block content %}
     <div class="row mt-1">
-        <div class="col-lg-2">
-            <!-- Пустой блок на Ваше усмотрение -->
-        </div>
         <div class="col-lg-10">
-            <!-- Контент на странице -->
-            <h1 class="mt-5 pt-5 text-white"><strong>Магазин компьютерных игр GAME ZONE</strong></h1>
+            <h1 class="mt-5 pt-5 text-white"><strong>{{ header }}</strong></h1>
         </div>
     </div>
 {% endblock  %}
