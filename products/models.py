@@ -2,11 +2,13 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True, blank=True, null=True)
+    name = models.CharField(max_length=100, unique=True, verbose_name="Категория")
+    slug = models.SlugField(max_length=100, unique=True, blank=True, null=True, verbose_name="URL")
 
     class Meta:
         db_table = "categories"
+        verbose_name = "Категорию"
+        verbose_name_plural = "Категории"
 
 
 class Product(models.Model):
@@ -20,3 +22,5 @@ class Product(models.Model):
 
     class Meta:
         db_table = "products"
+        verbose_name = "Товар"
+        verbose_name_plural = "Товары"
