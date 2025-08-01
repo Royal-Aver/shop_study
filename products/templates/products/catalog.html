@@ -47,212 +47,30 @@
             </form>
         </div>
         <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/far_cry_3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="../goods/product.html">
-                        <p class="card-title">Far cry 3</p>
-                    </a>
-                    <p class="card-text text-truncate">Игра на острове.</p>
-                    <p class="product_id">id: 02165</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1299.00</s> руб.</p>
-                        <p><strong>1099.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>1299 руб.</strong></p> -->
-                        <a href="#" class="btn add-to-cart">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
+        {% for product in products %}
+            <div class="col-lg-4 col-md-6 p-4">
+                <div class="card border-primary rounded custom-shadow">
+                    <img src="{% static product.image %}" class="card-img-top" alt="{{ products }}">
+                    <div class="card-body">
+                        <a href="../goods/product.html">
+                            <p class="card-title">{{ product.name }}</p>
                         </a>
+                        <p class="card-text text-truncate">{{ product.description }}</p>
+                        <p class="product_id">id: 02165</p>
+                        <div class="d-flex justify-content-between">
+                            <p><s>{{ product.price }}</s> руб.</p>
+                            <p><strong>1099.00 руб.</strong></p>
+                            <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
+                            <!-- <p><strong>1299 руб.</strong></p> -->
+                            <a href="#" class="btn add-to-cart">
+                                <img class="mx-1" src=" {% static "/deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
+                                    width="32" height="32">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/diablo3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">Diablo 3</p>
-                    </a>
-                    <p class="card-text text-truncate">Нужно победить владык преисподней</p>
-                    <p class="product_id">id: 02263</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>999.00</s> руб.</p>
-                        <p><strong>899.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn add-to-cart">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/fahrenheit.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">Fahrenheit</p>
-                    </a>
-                    <p class="card-text text-truncate">Становится холодно на земле. Давай разбираться</p>
-                    <p class="product_id">id: 02665</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>499.00</s> руб.</p>
-                        <p><strong>399.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/fallout.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">Fallout New Vegas</p>
-                    </a>
-                    <p class="card-text text-truncate">Казино на осколках мира.</p>
-                    <p class="product_id">id: 06265</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>499</s> руб.</p>
-                        <p><strong>399.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/gow.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">God of war</p>
-                    </a>
-                    <p class="card-text text-truncate">Чем занимается убийца богов в Скандинавии</p>
-                    <p class="product_id">id: 02245</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1499.00</s> руб.</p>
-                        <p><strong>1299.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/gow.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">God of war</p>
-                    </a>
-                    <p class="card-text text-truncate">Чем занимается убийца богов в Скандинавии</p>
-                    <p class="product_id">id: 02245</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1499</s> руб.</p>
-                        <p><strong>1299.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/gow.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">God of war</p>
-                    </a>
-                    <p class="card-text text-truncate">Чем занимается убийца богов в Скандинавии</p>
-                    <p class="product_id">id: 02245</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1499</s> руб.</p>
-                        <p><strong>1299.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/gow.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">God of war</p>
-                    </a>
-                    <p class="card-text text-truncate">Чем занимается убийца богов в Скандинавии</p>
-                    <p class="product_id">id: 02245</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1499</s> руб.</p>
-                        <p><strong>1299.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                <img src="../deps/images/goods/gow.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#">
-                        <p class="card-title">God of war</p>
-                    </a>
-                    <p class="card-text text-truncate">Чем занимается убийца богов в Скандинавии</p>
-                    <p class="product_id">id: 02245</p>
-                    <div class="d-flex justify-content-between">
-                        <p><s>1499</s> руб.</p>
-                        <p><strong>1299.00 руб.</strong></p>
-                        <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                        <!-- <p><strong>100.00 $</strong></p> -->
-                        <a href="#" class="btn">
-                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>                        <!-- Карта товара -->
+        {% endfor %}
     </div>
     <!-- Пагинация -->
     <nav aria-label="Page navigation example">
