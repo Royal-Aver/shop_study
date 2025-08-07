@@ -82,13 +82,8 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Все товары</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">Шутеры</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">Приключения</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">Симуляторы</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">Гонки</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">RPG</a></li>
-                        <li><a class="dropdown-item text-white" href="../goods/catalog.html">Хорроры</a></li>
+                        {% for category in categories %}{% endfor %}
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">{{ category.name }}</a></li>
                     </ul>
                 </div>
                 <!-- Значек корзины, вызывает модальное окно -->
