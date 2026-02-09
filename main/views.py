@@ -4,12 +4,10 @@ from products.models import Category
 
 
 def index(request):
-    categories = Category.objects.all()
 
     context = {
         'title': 'Главная',
         'header': 'Магазин компьютерных игр GAME ZONE',
-        'categories': categories,
     }
 
     return render(request, 'main/index.html', context)
